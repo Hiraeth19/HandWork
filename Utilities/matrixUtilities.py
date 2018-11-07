@@ -14,7 +14,7 @@ def list_to_matrix(list_):
     return new
 
 
-# Load wieghts from a file
+# Load weights from a file
 def load_weights(file):
     with open(file, 'r') as weights:
         weight_list = []
