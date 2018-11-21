@@ -1,5 +1,5 @@
 from Utilities.imageUtilities import convert_grayscale, open_image
-from Utilities.matrixUtilities import list_to_matrix, load_weights, multiply_matrices, convert_string_to_int
+from Utilities.matrixUtilities import list_to_matrix, load_weights, multiply_matrices, convert_string_to_int, sigmoid
 
 
 # TODO: Back Propagation
@@ -33,4 +33,5 @@ if __name__ == '__main__':
 
     # Create the output layer by multiplying the weights and activations
     output = multiply_matrices(weights3, layer3)
-    print(output)
+
+    print(sigmoid(0))

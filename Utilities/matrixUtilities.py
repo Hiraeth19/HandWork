@@ -1,4 +1,5 @@
 import numpy
+from math import exp
 # Matrix processing module
 
 
@@ -29,3 +30,8 @@ def convert_string_to_int(list_):
     for i in range(0, len(list_), 1):
         for j in range(0, len(list_[i]), 1):
             list_[i][j] = int(list_[i][j])
+
+
+# Sigmoid function
+def sigmoid(number):
+    return 1/(1+exp(-number))
