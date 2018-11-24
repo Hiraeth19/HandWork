@@ -33,5 +33,3 @@ if __name__ == '__main__':
 
     # Create the output layer by multiplying the weights and activations
     output = multiply_matrices(weights3, layer3)
-
-    print(sigmoid(0))

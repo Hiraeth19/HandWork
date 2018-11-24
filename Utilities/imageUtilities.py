@@ -50,7 +50,7 @@ def convert_grayscale(image):
             blue = pixel[2]
 
             # Transform to grayscale using the formula (0.3 * R) + (0.59 * G) + (0.11 * B)
-            gray = (red * 0.3) + (green * 0.59) + (blue * 0.11)
+            gray = 255 - ((red * 0.3) + (green * 0.59) + (blue * 0.11))
 
             pixels.append(gray)
 
