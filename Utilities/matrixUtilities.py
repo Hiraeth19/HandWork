@@ -1,5 +1,5 @@
 import numpy
-from math import exp
+import json
 # Matrix processing module
 
 
@@ -18,11 +18,8 @@ def list_to_matrix(list_):
 # Load weights from a file
 def load_weights(file):
     with open(file, 'r') as weights:
-        weight_list = []
-        for line in weights:
-            weight_list.append(line.rstrip().split(','))
-
-        return weight_list
+        weights = json.loads(weights.read())
+    return weights['weights']
 
 
 # Convert a list of strings to list of ints
@@ -34,4 +31,4 @@ def convert_string_to_int(list_):
 
 # Sigmoid function
 def sigmoid(number):
-    return 1/(1+exp(-number))
+    return 1/(1+numpy.exp(-number))
